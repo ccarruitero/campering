@@ -3,6 +3,7 @@
 <head>
     <title>{% block title %}Campering{% endblock %}</title>
     <meta charset="utf-8" />
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
@@ -10,5 +11,9 @@
     <h1>campering</h1>
     {% endblock %}
     {% block body %}{% endblock %}
+
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js'></script>
+    <script src="{{ url_for('static', filename='js/settings.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/app.js')}}"></script>
 </body>
 </html>
