@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block head %}
+  <link rel=stylesheet href="{{ url_for('static', filename='css/chat.css') }}">
+{% endblock %}
+{% block body %}
+Enter Chat and press enter
+<div><input id=input placeholder=you-chat-here /></div>
+ 
+Chat Output
+<div id=box></div>
+  
+<script src=http://cdn.pubnub.com/pubnub.min.js></script>
+<script src="{{ url_for('static', filename='js/chat.js')}}"></script>
+{% endblock %}

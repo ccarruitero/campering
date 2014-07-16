@@ -1,5 +1,12 @@
 {% extends "layout.html" %}
+{% block head %}
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
+{% endblock %}
 {% block body %}
     <section id="map">
     </section>
+
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js'></script>
+    <script src="{{ url_for('static', filename='js/settings.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/app.js')}}"></script>
 {% endblock %}
