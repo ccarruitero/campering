@@ -5,8 +5,15 @@
 
     // HANDLE TEXT MESSAGE
     function chat_receive(text) {
-        box.innerHTML = (''+text).replace( /[<>]/g, '' ) +
-            '<br>' + box.innerHTML;
+      var boxMessage = document.createElement('div');
+      var message = document.createElement('div');
+
+      boxMessage.setAttribute('class', 'box-message');
+      message.setAttribute('class', 'message');
+
+      message.innerHTML = text;
+      box.Message.appendChild(message);
+      box.appendChild(boxMessage);
     }
 
     // OPEN SOCKET TO RECEIVE TEXT MESSAGE
