@@ -7,6 +7,10 @@ app.config.from_pyfile('local_settings.py')
 def index():
     return render_template('index.html')
 
+@app.route('/chat')
+def chat():
+    return render_template('chat.html')
+
 @app.errorhandler(404)
 def page_not_found(error):
     return make_response(render_template('index.html'), 302)
