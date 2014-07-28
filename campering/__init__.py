@@ -1,7 +1,15 @@
 from flask import Flask, render_template, url_for, make_response
+from roads import roads_app
+from campering.shared.models import db
 
-app = Flask(__name__)
-app.config.from_pyfile('local_settings.py')
+def create_app():
+    app = Flask(__name__)
+    app.config.from_pyfile('local_settings.py')
+    db.init_app(app)
+    return app
+
+app = create_app()
+app.register_blueprint(roads_app, url_prefix='/api/v0.1/roads')
 
 @app.route('/')
 def index():
