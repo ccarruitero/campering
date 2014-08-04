@@ -1,2 +1,2 @@
 # campering
-an carpooling app
+a carpooling app
